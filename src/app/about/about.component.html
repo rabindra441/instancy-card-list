@@ -1,0 +1,42 @@
+<div class="container-fluid infov">
+  <div class="card-sl row m-0 mb-3" [ngClass]="isList ? 'listView' : 'gridView'">
+    <div class="card-image p-0" [ngClass]="isList ? 'col-lg-3' : 'col-lg-12'">
+      <img class="responsive" [src]="item?.Thumbnail" />
+      <a class="card-action" href="#"
+        ><img [src]="item.IsEvent ? '/assets/icons/1.png' : '/assets/icons/2.png'" class="fa fa-heart"
+      /></a>
+    </div>
+    <div [ngClass]="isList ? 'col-lg-6' : 'col-lg-12'" class="p-0">
+      <a href="#" class="card-button pl-2"
+      ><button type="button" class="btn btn-link">Leadership Program</button>
+      <i [ngClass]="isList ? 'float-start' : ''" class="fa fa-ellipsis-v"></i
+    ></a>
+    <button type="button" class="btn btn-link font-weight-bold">Jhon Smith</button>
+    <a href="#" class="card-button pl-2"
+      ><span>Virtual Classroom</span>
+    <span style="font-size: 13px">{{ item.IsEvent ? (date | date: 'medium') : '' }}</span>
+    </a>
+    <p class="prgline"><ngb-progressbar  height=".3rem" type="warning" [value]="25"></ngb-progressbar></p>
+    <a href="#" class="card-button p0"
+    ><button type="button" class="btn btn-link p-0 text-warning font-weight-bold">50%in Progress </button>
+    <app-rating [(ngModel)]="item.rating" [max]="5" style="font-size:11px"> </app-rating>
+  </a>
+
+      <!-- <div class="card-heading">{{ item?.Name }}</div>
+      <div class="card-heading1">{{ item.IsEvent ? (date | date: 'medium') : '' }}</div>
+      <div class="card-text">
+        {{ item?.Description }}
+      </div>
+      <a class="learn">SimpliLearn</a> -->
+
+
+      <!-- <div class="card-text">
+        <button type="button" class="card-text btn btn-outline-success mb-1 text-success btn-footer">{{item.ContentType}}</button>
+      </div>
+    </div>
+
+    <div [ngClass]="isList ? 'col-lg-3' : 'col-lg-12'" class="p-0">
+
+    </div> -->
+  </div>
+</div>

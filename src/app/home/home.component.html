@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+  <div class="toggle">
+    <p>Showing {{data.length}} of {{data.length}} results</p>
+    <div>
+      <a
+      placement="top"
+      ngbTooltip="{{ !isList ? 'List View' : 'Card View' }}"
+      (click)="isList = !isList"
+      class="view actbtn grid on cursor"
+      aria-label="Grid"
+      ><i class="fa" [ngClass]="!isList ? 'fa-bars' : 'fa-th'" aria-hidden="true"></i>
+    </a>
+
+    <a class="view list actbtn" style="margin-left:20px;" aria-label="List"><i class="fa fa-filter" aria-hidden="true"></i> </a>
+
+    </div>
+
+  </div>
+  <app-breadcrumb></app-breadcrumb>
+
+  <div [ngClass]="isList ? 'list-group-wrapper' : 'grid-group-wrapper'">
+    <ng-container *ngFor="let item of data">
+      <div class="item ">
+        <app-card-view [item]="item" [isList]="isList"></app-card-view>
+      </div>
+    </ng-container>
+  </div>
+</div>

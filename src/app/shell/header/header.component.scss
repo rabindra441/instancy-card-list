@@ -1,0 +1,12 @@
+@import "src/theme/theme-variables";
+
+.navbar {
+  margin-bottom: $spacer;
+  .navbar-brand{
+    margin-left: 40px;
+  }
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
