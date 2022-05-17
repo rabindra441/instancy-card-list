@@ -1,7 +1,10 @@
-# cardList
+# Instancy cardList
 
 This project was generated with [](https://github.com//generator-/)
-version 10.1.2
+version 13.1.2
+
+# ****Preview *****
+[Click the link](https://instancy-cardlist.web.app/)
 
 # Getting started
 
