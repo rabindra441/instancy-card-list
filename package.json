@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build  --configuration=production",
     "start": "ng serve",
     "lint": "ng lint && stylelint \"src/**/*.scss\"",
     "test": "npm run write:env -s && ng test",
